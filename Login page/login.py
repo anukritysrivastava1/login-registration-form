@@ -91,8 +91,8 @@ class Login_window:
             con=mysql.connector.connect(host="localhost",user="root",password="Motot@1234",database="mydata")
             cur=con.cursor()
             cur.execute("select * from register where email=%s and password=%s", (
-                                                                                    self.var_email.get(),
-                                                                                    self.var_pass.get()
+                                                                                    self.txtuser.get(),
+                                                                                    self.txtpass.get()
                                                                                 ))
            
             row=cur.fetchone()
